@@ -9,18 +9,18 @@ from .models import Category, Post
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ['title', 'description', 'add_date']
-    list_display_links = ['title']
-    list_filter = ['title']
     search_fields = ['title']
     list_per_page = 25
 
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ['title', 'image_tag', 'content', 'add_date', ]
-    list_display_links = ['title']
-    list_filter = ['title']
+    list_display = ['image_tag', 'title', 'add_date']
     search_fields = ['title']
     list_per_page = 25
+
+    class Media:
+        js = (
+            'https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js', 'js/script.js',)
 
 
 admin.site.register(Category, CategoryAdmin)
