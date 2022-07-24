@@ -16,7 +16,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ['title', 'content', 'add_date']
+    list_display = ['title', 'image_tag', 'content', 'add_date', ]
     list_display_links = ['title']
     list_filter = ['title']
     search_fields = ['title']
@@ -24,4 +24,4 @@ class PostAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Category, CategoryAdmin)
-admin.site.register(Post)
+admin.site.register(Post, PostAdmin)
