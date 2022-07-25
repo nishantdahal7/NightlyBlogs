@@ -64,7 +64,7 @@ ROOT_URLCONF = 'Blogs.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -112,6 +112,9 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 
 # Internationalization
@@ -141,7 +144,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MATERIAL_ADMIN_SITE = {
-    'HEADER':  'Administration Panel',  # Admin site header
-    'TITLE':  'Admin',  # Admin site title
+    'HEADER':  'Administration Panel',
+    'TITLE':  'Admin',
+    'SHOW_THEMES':  True,
+    'MAIN_BG_COLOR':  'white',
 
 }
