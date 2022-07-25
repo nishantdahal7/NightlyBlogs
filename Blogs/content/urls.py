@@ -5,6 +5,6 @@ from django.conf import settings
 from .views import home, post
 
 urlpatterns = [
-    path('home/', home),
+    path('', home),
     path('content/<slug:url>/', post)
 ]
