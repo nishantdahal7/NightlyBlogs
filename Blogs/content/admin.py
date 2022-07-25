@@ -14,9 +14,10 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ['image_tag', 'title', 'add_date']
+    list_display = ['title', 'image_tag', 'add_date']
     search_fields = ['title']
-    list_per_page = 25
+    list_filter = ['category']
+    list_per_page = 50
 
     class Media:
         js = (
