@@ -2,14 +2,14 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-xl">
             <!-- logo  -->
-            <a href="/home" class="navbar-brand">
+            <a href="/" class="navbar-brand">
                 <img src="../static/images/logo.png" alt="" alt style="height: inherit; width: inherit;" />
             </a>
 
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item dropdown active">
-                        <a href="/home" class="nav-link dropdown-toggle">Home</a>
+                        <a href="/" class="nav-link dropdown-toggle">Home</a>
 
                     </li>
                     <li class="nav-item" style="margin-left: inherit;">
@@ -21,6 +21,9 @@
                     <li class="nav-item">
                         <a href="/signup" class="nav-link">Signup</a>
                     </li>
+
+                    <span id="hello-msg">Hello, {{request.user }} </span> <br>
+                    <span><a href="/logout"> Logout</a></span>
 
                 </ul>
             </div>
@@ -68,7 +71,7 @@
     <nav>
         <ul class="vertical-menu">
             <li class="active">
-                <a href="/home">Home</a>
+                <a href="/">Home</a>
 
             </li>
             <li><a href="#">Latest</a></li>

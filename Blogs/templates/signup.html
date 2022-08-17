@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/loginpage.css' %}" />
+
+    <!-- icons  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <div class="flex-r container">
+        <div class="flex-r login-wrapper">
+            <div class="login-text">
+                <a href="/" class="navbar-brand">
+                    <img src="../static/images/logo.png" alt="" alt style="width: 150px;" />
+                </a>
+                <h1>Sign Up</h1>
+                <p>It's not long before you embark on this journey!</p>
+
+                <form method="POST" action="" class="flex-c">
+                    {% csrf_token %}
+                    <div class="input-box">
+                        <span class="label">First Name</span>
+                        <div class="flex-r input">
+                            <input type="text" placeholder="First Name" name="fn" />
+                            <i class="fas fa-at"></i>
+                        </div>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="label">Last Name</span>
+                        <div class="flex-r input">
+                            <input type="text" placeholder="Last Name" name="ln" />
+                            <i class="fas fa-at"></i>
+                        </div>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="label">E-mail</span>
+                        <div class="flex-r input">
+                            <input type="email" placeholder="name@abc.com" name="em" />
+                            <i class="fas fa-at"></i>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <span class="label">Username</span>
+                        <div class="flex-r input">
+                            <input type="text" placeholder="Username" name="un" />
+                            <i class="fas fa-at"></i>
+                        </div>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="label">Password</span>
+                        <div class="flex-r input">
+                            <input type="password" placeholder="8+ (a, A, 1, #)" name="pw" />
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+
+                    <div class="check">
+                        <input type="checkbox" name="" id="" />
+                        <span>I'm ready to join!!!</span>
+                    </div>
+                    {{form.errors}}
+                    <input class="btn" type="submit" value="Create an Account" name="reg" />
+                    <span class="extra-line">
+                        <span>Already have an account?</span>
+                        <a href="/login">Sign In</a>
+                    </span>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
