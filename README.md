@@ -14,3 +14,15 @@ NightlyBlog is a blogging platform. A service that shall be used to publish vari
          <li>Manage posts.
           
          </ol><br>
+
+## Django Setup & Installation 
+<ul>
+<li>cd {Folder}<br>
+<li>pip install -r requirements.txt <br>
+<li>pip install django<br>
+<li>django-admin<br>
+<li>pip install mysqlclient [XAMPP] (https://www.apachefriends.org/download.html) [start-servers]
+<li>python manage.py makemigrations<br>
+<li>python manage.py migrate<br>
+<li>To run: python manage.py runserver<br>
+</ul>
