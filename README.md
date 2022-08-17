@@ -13,7 +13,7 @@ NightlyBlog is a blogging platform. A service that shall be used to publish vari
         <li> Manage categories.
          <li>Manage posts.
           
-         </ol><br>
+       
 
 ## Django Setup & Installation 
 <ul>
